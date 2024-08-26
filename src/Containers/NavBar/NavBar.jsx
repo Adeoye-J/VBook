@@ -6,7 +6,7 @@ import {RiMenu3Line, RiCloseFill} from "react-icons/ri"
 import { VBookContext } from '../../VBookContext/VBookContext'
 
 
-const [showMobileMenu, setShowMobileMenu] = useState(false)
+// const [showMobileMenu, setShowMobileMenu] = useState(false)
 
 const Menu = () => {
 
@@ -43,7 +43,7 @@ const Menu = () => {
 const NavBar = () => {
     
     // const {} = useContext(VBookContext)
-    // const [showMobileMenu, setShowMobileMenu] = useState(false)
+    const [showMobileMenu, setShowMobileMenu] = useState(false)
 
     
     return (
