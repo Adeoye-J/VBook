@@ -20,8 +20,8 @@ const Menu = () => {
     
     return(
         <>
-            <li onClick={() => {setMenu("Home"); setShowSublist(false)}} ><Link onClick={() => setShowMobileMenu(false)} className={`list-item ${menu === "Home" && "underline"}`} to={"/home"}>Home</Link></li>
-            <li onClick={() => {setMenu("Books"); setShowSublist(false)}} ><Link onClick={() => setShowMobileMenu(false)} className={`list-item ${menu === "Books" && "underline"}`} to={"/books"}>Books</Link></li>
+            <li onClick={() => {setMenu("Home"); setShowSublist(false)}} ><Link className={`list-item ${menu === "Home" && "underline"}`} to={"/home"}>Home</Link></li>
+            <li onClick={() => {setMenu("Books"); setShowSublist(false)}} ><Link className={`list-item ${menu === "Books" && "underline"}`} to={"/books"}>Books</Link></li>
 
             <li 
                 onClick={handleCategories}
@@ -29,13 +29,13 @@ const Menu = () => {
                 <Link className={`list-item ${menu === "Categories" && "underline"}`} >Categories</Link>
                 {showSublist && (
                     <ul className='sublist'>
-                        <li><Link onClick={() => setShowMobileMenu(false)} className='list-item' to={"/categories/fiction"}>Fiction</Link></li>
-                        <li><Link onClick={() => setShowMobileMenu(false)} className='list-item' to={"/categories/non-fiction"}>Non-Fiction</Link></li>
+                        <li><Link className='list-item' to={"/categories/fiction"}>Fiction</Link></li>
+                        <li><Link className='list-item' to={"/categories/non-fiction"}>Non-Fiction</Link></li>
                     </ul>
                 )}
             </li>
-            <li onClick={() => {setMenu("Trending"); setShowSublist(false)}} ><Link onClick={() => setShowMobileMenu(false)} className={`list-item ${menu === "Trending" && "underline"}`} to={"/pages/trending"}>Trending</Link></li>
-            <li onClick={() => {setMenu("Deals"); setShowSublist(false)}} ><Link onClick={() => setShowMobileMenu(false)} className={`list-item ${menu === "Deals" && "underline"}`} to={"/pages/deals"}>Deals</Link></li>
+            <li onClick={() => {setMenu("Trending"); setShowSublist(false)}} ><Link className={`list-item ${menu === "Trending" && "underline"}`} to={"/pages/trending"}>Trending</Link></li>
+            <li onClick={() => {setMenu("Deals"); setShowSublist(false)}} ><Link className={`list-item ${menu === "Deals" && "underline"}`} to={"/pages/deals"}>Deals</Link></li>
         </>
     )
 }
