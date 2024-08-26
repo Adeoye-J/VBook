@@ -1,0 +1,26 @@
+.section-spacing {
+    padding-inline: 4rem;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+    .section-spacing {
+        padding-inline: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .section-spacing {
+        padding-inline: 1rem;
+    }
+}

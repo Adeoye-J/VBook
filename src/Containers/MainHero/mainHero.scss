@@ -1,0 +1,37 @@
+.mainhero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+    background-image: url("/background-image/book_shelf.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 255, 0.699);
+    background-blend-mode: color;
+
+    .mainhero-content {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .path {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+
+            .reference {
+                color: blue;
+                font-weight: 800;
+                padding-right: 5px;
+            }
+        }
+    }
+}

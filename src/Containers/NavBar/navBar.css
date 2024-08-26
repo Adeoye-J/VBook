@@ -1,0 +1,109 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: rgba(1, 1, 109, 0.897);
+}
+.navbar-container .logo-container .logo h1 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.navbar-container .logo-container .logo h1 span {
+  color: blue;
+  font-size: 1.7rem;
+}
+.navbar-container .main-menu .list-items {
+  display: flex;
+  align-items: center;
+}
+.navbar-container .main-menu .list-items li {
+  position: relative;
+}
+.navbar-container .main-menu .list-items li .list-item {
+  color: #fff;
+  margin: 0.7rem;
+}
+.navbar-container .main-menu .list-items li .underline {
+  border-bottom: 2px solid #fff;
+}
+.navbar-container .main-menu .list-items li ul {
+  background-color: rgba(1, 1, 109, 0.897);
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: 150px;
+}
+.navbar-container .main-menu .list-items li ul li {
+  border-bottom: 1px solid #fff;
+  padding: 1rem;
+}
+.navbar-container .main-menu .list-items .cross-bar {
+  display: none;
+}
+.navbar-container .icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navbar-container .icons button {
+  transition: all ease 0.5s;
+}
+.navbar-container .icons button:hover {
+  background-color: rgb(7, 7, 175);
+}
+.navbar-container .icons .menu-bar {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar-container {
+    position: relative;
+  }
+  .navbar-container .main-menu {
+    display: none;
+  }
+  .navbar-container .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    min-width: 200px;
+    background-color: rgba(1, 1, 109, 0.979);
+    z-index: 30;
+  }
+  .navbar-container .mobile-menu .list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 80%;
+    padding-top: 5rem;
+  }
+  .navbar-container .mobile-menu .list-items li {
+    position: relative;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .navbar-container .mobile-menu .list-items li .list-item {
+    color: #fff;
+  }
+  .navbar-container .mobile-menu .list-items li ul {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1rem;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+  .navbar-container .mobile-menu .list-items .cross-bar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .navbar-container .icons .menu-bar {
+    display: block;
+  }
+}/*# sourceMappingURL=navBar.css.map */

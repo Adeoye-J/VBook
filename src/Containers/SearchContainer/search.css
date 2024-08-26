@@ -1,0 +1,62 @@
+.search-container {
+  padding-block: 2rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-container .center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid blue;
+  border-radius: 5px;
+  padding: 1rem 3rem;
+}
+.search-container .center h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.search-container .center h1 span {
+  color: blue;
+}
+.search-container .center .form-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.search-container .center .form-container label {
+  width: 300px;
+}
+.search-container .center .form-container label input {
+  width: 100%;
+  height: 45px;
+  padding-inline: 1rem 0.5rem;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid blue;
+}
+.search-container .center .form-container button {
+  width: 150px;
+  border-radius: 5px;
+  transition: all ease 0.5s;
+  border: none;
+  height: 45px;
+}
+.search-container .center .form-container button:hover {
+  background-color: rgb(7, 7, 175);
+}
+@media screen and (max-width: 650px) {
+  .search-container .center {
+    padding: 1rem;
+  }
+  .search-container .center .form-container {
+    flex-direction: column;
+  }
+  .search-container .center .form-container label {
+    width: 280px;
+  }
+}/*# sourceMappingURL=search.css.map */

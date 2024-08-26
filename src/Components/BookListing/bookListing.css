@@ -1,0 +1,48 @@
+.booklist-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.booklist-container .booklist-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.booklist-container .booklist-content .booklist-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.booklist-container .booklist-content .booklist-info h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+.booklist-container .booklist-content .booklist-info .underline {
+  height: 4px;
+  width: 100px;
+  background-color: blue;
+}
+.booklist-container .booklist-content .booklist-books {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  .booklist-container .booklist-content .booklist-books {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .booklist-container .booklist-content .booklist-books {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+}/*# sourceMappingURL=bookListing.css.map */

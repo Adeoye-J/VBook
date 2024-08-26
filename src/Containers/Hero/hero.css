@@ -1,0 +1,81 @@
+.hero-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6784313725);
+  background-blend-mode: color;
+  background-image: url("/background-image/spectacles-on-book.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.hero-container .hero-carousel {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-container .hero-carousel .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+.hero-container .hero-carousel .item .image-container {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-container .hero-carousel .item .image-container img {
+  width: 100%;
+}
+.hero-container .hero-carousel .item .item-info {
+  width: 50%;
+}
+.hero-container .hero-carousel .item .item-info .title h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hero-container .hero-carousel .item .item-info .title span {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.hero-container .hero-carousel .item .item-info .description p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.hero-container .hero-carousel .item .item-info .action button {
+  width: 200px;
+  height: 45px;
+  border-radius: 10px;
+  transition: all ease 0.5s;
+}
+.hero-container .hero-carousel .item .item-info .action button:hover {
+  background-color: rgb(7, 7, 175);
+}
+
+@media screen and (max-width: 850px) {
+  .hero-container .hero-carousel {
+    width: 100%;
+  }
+  .hero-container .hero-carousel .item .item-info .description p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .hero-container .hero-carousel .item {
+    flex-direction: column;
+  }
+  .hero-container .hero-carousel .item .item-info {
+    width: 300px;
+  }
+  .hero-container .hero-carousel .item .item-info .description p {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=hero.css.map */

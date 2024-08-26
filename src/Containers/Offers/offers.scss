@@ -1,0 +1,62 @@
+.offers-container {
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    padding: 1rem;
+
+    width: 100%;
+
+    .offers-content {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem;
+
+        .offer {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .icon-con {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .icon {
+                    color: blue;
+                    font-size: 2rem;
+                }
+            }
+
+            .details {
+
+                h1 {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .offers-content {
+            flex-direction: column;
+            gap: 2rem;
+
+            .offer {
+                border-bottom: 1px solid;
+                transition: all ease .5s;
+
+                &:hover {
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+}

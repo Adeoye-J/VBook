@@ -1,0 +1,45 @@
+.specialoffer-container {
+  background-image: url("/background-image/bg-language.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.2392156863);
+  background-blend-mode: color;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.specialoffer-container .specialoffer-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  width: 80%;
+}
+.specialoffer-container .specialoffer-content h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.specialoffer-container .specialoffer-content h1 {
+  color: orange;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.specialoffer-container .specialoffer-content p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+.specialoffer-container .specialoffer-content button {
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  transition: all ease 0.5s;
+}
+.specialoffer-container .specialoffer-content button:hover {
+  background-color: rgb(7, 7, 175);
+}/*# sourceMappingURL=specialOffer.css.map */

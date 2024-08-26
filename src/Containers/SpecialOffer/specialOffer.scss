@@ -1,0 +1,54 @@
+.specialoffer-container {
+    background-image: url("/background-image/bg-language.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff3d;
+    background-blend-mode: color;
+
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .specialoffer-content {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+
+        width: 80%;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            color: orange;
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 2rem;
+        }
+
+        button {
+            border-radius: 5px;
+            width: 200px;
+            height: 50px;
+            transition: all ease .5s;
+    
+            &:hover {
+                background-color: rgb(7, 7, 175)
+            }
+        }
+    }
+}
