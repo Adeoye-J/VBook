@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import "./bookDetails.css"
 import { VBookContext } from '../../VBookContext/VBookContext'
+import { Link } from 'react-router-dom'
 import all_data from "../../all_books.json"
 import MainHero from '../../Containers/MainHero/MainHero'
 import Newsletter from '../../Containers/Newsletter/Newsletter'
@@ -8,7 +9,7 @@ import SideCart from '../Carts/SideCart/SideCart'
 
 const BookDetails = () => {
 
-    const {selectedItem, handleAddToCart, handleRemoveFromCart, showMiniCart, cartData} = useContext(VBookContext)
+    const {selectedItem, handleAddToCart, handleRemoveFromCart, showMiniCart, setShowMiniCart, cartData, wishlist, handleAddToWishlist, handleRemoveFromWishlist} = useContext(VBookContext)
 
     const item = all_data.find((data) => data.title === selectedItem)
 
@@ -36,6 +37,17 @@ const BookDetails = () => {
             handleRemoveFromCart(itemIndex)
         } else {
             handleAddToCart()
+        }
+    }
+
+    const handleWishlistAction = () => {
+        const itemIndex = wishlist.findIndex((wish) => wish.title === selectedItem)
+
+        if (itemIndex !== -1) {
+            // If the item is in the cart, remove it using its index
+            handleRemoveFromWishlist(itemIndex)
+        } else {
+            handleAddToWishlist()
         }
     }
 
@@ -105,18 +117,19 @@ const BookDetails = () => {
                     </div>
                     <div className="action-container">
                         <div className="passive-action">
-                            {/* {
-                                cart.includes(selectedItem) 
-                                ? <button onClick={handleRemoveFromCart}>Remove From Cart</button> 
-                                : <button onClick={handleAddToCart}>Add To Cart</button>
-                            } */}
                             <button onClick={handleCartAction}>
                                 {cartData.some(cartItem => cartItem.title === selectedItem) ? 'Remove From Cart' : 'Add To Cart'}
                             </button>
-                            <button>Add To Wishlist</button>
+                            <button onClick={handleWishlistAction}>
+                                {wishlist.some(wish => wish.title === selectedItem) ? 'Remove From Wish' : 'Add To Wishlist'}
+                            </button>
                         </div>
                         <div className="active-action">
-                            <button>Buy It Now</button>
+                            <Link onClick={() => setShowMiniCart(true)}>
+                                <button onClick={handleAddToCart}>
+                                    Buy It Now
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

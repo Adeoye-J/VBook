@@ -11,6 +11,7 @@ import recommended_data from "../../recommended_books.json"
 import deals_data from "../../deals_books.json"
 import SideCart from '../Carts/SideCart/SideCart'
 import { VBookContext } from '../../VBookContext/VBookContext'
+import SearchResult from '../../Containers/SearchResult/SearchResult'
 
 
 const Home = () => {
@@ -28,6 +29,7 @@ const Home = () => {
         <Hero />
         <Offers />
         <Search />
+        <SearchResult />
         <BookListing limit={3} dataType={deals_data["deals_books"]} title={"Deals"}/>
         <BookListing limit={3} dataType={trending_data["trending_books"]} title={"Trending"}/>
         <SpecialOffer />

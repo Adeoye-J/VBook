@@ -39,16 +39,6 @@
   border-radius: 5px;
   border: 1px solid blue;
 }
-.search-container .center .form-container button {
-  width: 150px;
-  border-radius: 5px;
-  transition: all ease 0.5s;
-  border: none;
-  height: 45px;
-}
-.search-container .center .form-container button:hover {
-  background-color: rgb(7, 7, 175);
-}
 @media screen and (max-width: 650px) {
   .search-container .center {
     padding: 1rem;

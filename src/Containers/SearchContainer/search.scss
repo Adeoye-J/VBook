@@ -1,7 +1,5 @@
 .search-container {
     padding-block: 2rem;
-    // background-color: grey;
-    // background-color: rgba(0, 0, 255, 0.473);
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -24,7 +22,6 @@
             font-weight: 600;
             text-transform: uppercase;
             margin-bottom: 1rem;
-            // color: blue;
 
             span {
                 color: blue;
@@ -47,25 +44,6 @@
                     font-size: 1rem;
                     border-radius: 5px;
                     border: 1px solid blue;
-                    // color: blue;
-
-                    // &::placeholder {
-                        // color: blue;
-                    // }
-                }
-    
-                
-            }
-    
-            button {
-                width: 150px;
-                border-radius: 5px;
-                transition: all ease .5s;
-                border: none;
-                height: 45px;
-    
-                &:hover {
-                    background-color: rgb(7, 7, 175)
                 }
             }
         }

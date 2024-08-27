@@ -12,6 +12,9 @@ import {VBookProvider} from './VBookContext/VBookContext'
 import BookDetails from './Components/BookDetails/BookDetails'
 import MainCart from './Components/Carts/MainCart/MainCart'
 import CheckOut from './Components/CheckOut/CheckOut'
+import Wishlist from './Components/Wishlist/Wishlist'
+import SignIn from './Components/SignIn/SignIn'
+import SignUp from './Components/SignUp/SignUp'
 
 function App() {
   return (
@@ -22,6 +25,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/books' element={<Books />} />
+          <Route path='/signin' element={<SignIn />} />
+          <Route path='/signup' element={<SignUp />} />
           <Route path='/categories'>
             <Route path='fiction' element={<Fiction />} />
             <Route path="non-fiction" element={<NonFiction />} />
@@ -29,6 +34,7 @@ function App() {
           <Route path='/pages'>
             <Route path='trending' element={<Trending />} />
             <Route path='deals' element={<Deals />} />
+            <Route path='wishlist' element={<Wishlist />} />
           </Route>
           <Route path='/all-books'>
             <Route path="bookdetails" element={<BookDetails />} />

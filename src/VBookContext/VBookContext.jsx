@@ -11,21 +11,32 @@ export const VBookProvider = ({children}) => {
     const [cartData, setCartData] = useState([])
     const [showMiniCart, setShowMiniCart] = useState(false)
     const [numCost, setNumCost] = useState([])
+    const [wishlist, setWishlist] = useState([])
+    const [search, setSearch] = useState("")
 
     const handleAddToCart = () => {
         const newItem = all_data.find(item => item.title === selectedItem)
         setCart(prevCart => [...prevCart, selectedItem])
         setCartData(prevCartData => [...prevCartData, newItem])
         setNumCost(prevNumCost => [...prevNumCost, { count: 1, cost: newItem['cost'] }])
-        setShowMiniCart(true)
+        // setShowMiniCart(true)
     };
 
     const handleRemoveFromCart = (indexToRemove) => {
-        setShowMiniCart(true);
-        setCart(prevCart => prevCart.filter((_, index) => index !== indexToRemove));
-        setCartData(prevCartData => prevCartData.filter((_, index) => index !== indexToRemove));
-        setNumCost(prevNumCost => prevNumCost.filter((_, index) => index !== indexToRemove));
+        // setShowMiniCart(true)
+        setCart(prevCart => prevCart.filter((_, index) => index !== indexToRemove))
+        setCartData(prevCartData => prevCartData.filter((_, index) => index !== indexToRemove))
+        setNumCost(prevNumCost => prevNumCost.filter((_, index) => index !== indexToRemove))
     };
+
+    const handleAddToWishlist = () => {
+        const newItem = all_data.find(item => item.title === selectedItem)
+        setWishlist(prevWishlist => [...prevWishlist, newItem])
+    }
+
+    const handleRemoveFromWishlist = (indexToRemove) => {
+        setWishlist(prevWishlist => prevWishlist.filter((_, index) => index !== indexToRemove))
+    }
 
     const handleIncrement = (index) => {
         setNumCost(prevNumCost => {
@@ -78,7 +89,13 @@ export const VBookProvider = ({children}) => {
                 handleIncrement,
                 handleDecrement,
                 getItemTotalCost,
-                getTotalCost
+                getTotalCost, 
+                wishlist, 
+                setWishlist,
+                handleAddToWishlist,
+                handleRemoveFromWishlist, 
+                search, 
+                setSearch
             }}
         >
             {children}

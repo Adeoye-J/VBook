@@ -1,0 +1,37 @@
+.empty-wishes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.empty-wishes .icon-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empty-wishes .icon-con .icon {
+  font-size: 10rem;
+  color: blue;
+}
+.empty-wishes p {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+.continue-shopping {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 2rem;
+}
+.continue-shopping button {
+  border-radius: 5px;
+  transition: all ease 0.5s;
+}
+.continue-shopping button:hover {
+  background-color: rgb(7, 7, 175);
+}/*# sourceMappingURL=wishlist.css.map */

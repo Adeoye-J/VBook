@@ -1,0 +1,326 @@
+
+
+.signup-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+
+    .login-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 10px;
+
+        .logo {
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        p {
+            font-size: .8rem;
+            font-weight: bold;
+        }
+    }
+    
+    .image-container {
+        padding-top: 70px;
+        background-color: azure;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .image-content {
+            width: 70%;
+            height: 350px;
+            // height: 70%;
+            margin-block: 3rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 100px 0px;
+            }
+        }
+
+        h1 {
+            font-size: 1.7rem;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .login-container {
+        padding-block: 70px 20px;
+        width: 50%;
+        padding-inline: 3rem;
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+
+        .login-content {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            gap: 1rem;
+
+            h1 {
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin-bottom: -10px;
+            }
+
+            p {
+                font-size: .7rem;
+            }
+
+            .login {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+
+                .input-container {
+
+                    label {
+                        display: inline-block;
+                        margin-block: 6px;
+                        font-size: .7rem;
+                        font-weight: 500;
+                    }
+
+                    input {
+                        display: block;
+                        width: 100%;
+                        height: 40px;
+                        border-radius: 5px;
+                        border: 1px solid #74646467;
+                        outline: none;
+                        padding-inline: 1rem;
+                        font-size: 1rem;
+
+                        &:focus {
+                            border: 1px solid #000;
+                        }
+                    }
+                }
+
+                .notification {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .notif {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        input {
+                            width: 15px;
+                            height: 15px;
+                            cursor: pointer;
+                        }
+
+                        span {
+                            font-size: .8rem;
+                            font-weight: 500;
+                        }
+                    }
+                    p {
+                        font-weight: bold;
+                        cursor: pointer;
+                        text-align: right;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .action {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    button {
+                        width: 100%;
+                        height: 40px;
+                        border-radius: 5px;
+                        border: none;
+                        background-color: blue;
+                        color: #fff;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: rgb(10, 10, 226);
+                        }
+                    }
+                }
+            }
+
+            .info {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+        
+                span {
+                    display: inline-block;
+                    width: 100%;
+                    border: 1px solid #857d7d33;
+                }
+        
+                p {
+                    text-wrap: nowrap;
+                }
+            }
+        
+            .social-logins {
+                display: flex;
+                margin: auto;
+                gap: 10px;
+                align-items: center;
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    gap: 7px;
+                    padding: 10px 5px;
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: 1px solid #857d7d33;
+                    border-radius: 5px;
+                    transition: all ease .4s;
+
+                    .icon-con {
+                        width: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .icon {
+                            font-size: 1rem;
+                            color: blue;
+                        }
+                    }
+
+                    span {
+                        color: blueviolet;
+                        font-weight: 600;
+                        font-size: .8rem;
+                    }
+
+                    &:hover {
+
+                        span {
+                            color: rgba(0, 0, 255, 0.486);
+                        }
+                    }
+
+                    &:focus {
+                        border: 2px solid blueviolet;
+                        
+                        span {
+                            color: blueviolet;
+                        }
+                    }
+                }
+
+                @media screen and (max-width: 900px) {
+                    button {
+                        padding: .6rem 1rem;
+
+                        .icon-con {
+
+                            .icon {
+                                font-size: 2rem;
+                            }
+                        }
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+
+            .redirection {
+                margin: auto;
+
+                p {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .image-container {
+            display: none;
+        }
+
+        .login-container {
+            width: 100%;
+
+            .login-content {
+                width: 90%;
+                // margin-block-start: 2rem;
+
+                .social-logins {
+
+                    button {
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .login-container {
+            .login-content {
+                width: 100%;
+
+                h1 {
+                    font-size: 1.1rem;
+                }
+
+                .social-logins {
+
+                    button {
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+
+                .redirection {
+                    margin-top: -1rem;
+                }
+            }
+        }
+    }
+}

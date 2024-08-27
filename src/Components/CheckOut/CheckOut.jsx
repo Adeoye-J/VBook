@@ -1,9 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import "./checkOut.css"
 import { VBookContext } from '../../VBookContext/VBookContext'
 import { Link } from 'react-router-dom'
-// import {FaCcMastercard, FaLock} from "react-icons/fa"
-import Payment from './Payment/Payment'
+import MainHero from '../../Containers/MainHero/MainHero'
 
 const CheckOut = () => {
 
@@ -11,13 +10,48 @@ const CheckOut = () => {
 
     const standard_cost = 20.32
 
+    const [cardNumber, setCardNumber] = useState('');
+    const [expiryDate, setExpiryDate] = useState('');
+    const [cvc, setCvc] = useState('');
+    const [error, setError] = useState('');
+
+    const handleCardNumberChange = (e) => {
+        const value = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+        setCardNumber(value);
+    };
+
+    const handleExpiryDateChange = (e) => {
+        const value = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+        setExpiryDate(value);
+    };
+
+    const handleCvcChange = (e) => {
+        const value = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+        setCvc(value);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (cardNumber.length !== 16 || expiryDate.length !== 4 || cvc.length !== 3) {
+            setError('Please fill out all fields correctly.');
+        } else {
+            setError('');
+            console.log('Card Number:', cardNumber);
+            console.log('Expiry Date:', expiryDate);
+            console.log('CVC:', cvc);
+            alert("Payment Successful!")
+        }
+    };
+
     return (
+        <>
+        <MainHero section_title={"Shopping Cart"} main_header={"CheckOut"} />
         <div className='check-out'>
-            <form action="">
+            <form action="" onClick={handleSubmit}>
                 <div className="first-section">
                     <div className="contact-login">
                         <h1>Contact</h1>
-                        <Link className='login'>Log In</Link>
+                        <Link to={"/signin"} className='login'>Log In</Link>
                     </div>
                     <div className="contact">
                         <input type="text" placeholder='Email or mobile phone number' />
@@ -76,26 +110,44 @@ const CheckOut = () => {
                 </div>
                 <div className="fifth-section">
                     <h1>Payment</h1>
-                    {/* <p>All transactions are secure and encrypted.</p>
-                    <div className="card-details">
-                        <div className="card-header">
-                            <p>Credit card</p>
-                            <FaCcMastercard />
-                        </div>
-                        <div className="card-content">
-                            <div className="card-number">
-                                <input type="number" />
-                                <FaLock />
-                            </div>
-                            <div className="date-code">
-                                <input type="" />
-                            </div>
-                        </div>
-                    </div> */}
-                    {/* <Payment /> */}
+                    <div>
+                        <label>Card Number</label>
+                        <input
+                            type="text"
+                            value={cardNumber}
+                            onChange={handleCardNumberChange}
+                            maxLength="16"
+                            placeholder="1234 5678 9012 3456"
+                        />
+                    </div>
+                    <div>
+                        <label>Expiry Date (MMYY)</label>
+                        <input
+                            type="text"
+                            value={expiryDate}
+                            onChange={handleExpiryDateChange}
+                            maxLength="4"
+                            placeholder="MMYY"
+                        />
+                    </div>
+                    <div>
+                        <label>CVC</label>
+                        <input
+                            type="text"
+                            value={cvc}
+                            onChange={handleCvcChange}
+                            maxLength="3"
+                            placeholder="CVC"
+                        />
+                    </div>
                 </div>
+                {error && <div style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
+                <button type="submit">
+                    Simulate Payment
+                </button>
             </form>
         </div>
+        </>
     )
 }
 

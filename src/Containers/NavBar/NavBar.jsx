@@ -3,7 +3,7 @@ import "./navBar.css"
 import { Link } from 'react-router-dom'
 import {FaHeart, FaShoppingCart} from "react-icons/fa"
 import {RiMenu3Line, RiCloseFill} from "react-icons/ri"
-import { VBookContext } from '../../VBookContext/VBookContext'
+// import { VBookContext } from '../../VBookContext/VBookContext'
 
 
 // const [showMobileMenu, setShowMobileMenu] = useState(false)
@@ -62,9 +62,9 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="icons">
-                <Link className='icon-link' to={"/wishlist"}><FaHeart className='icon' /> <div className="item-no"></div></Link>
+                <Link className='icon-link' to={"/pages/wishlist"}><FaHeart className='icon' /> <div className="item-no"></div></Link>
                 <Link className='icon-link' to={"/cart"}><FaShoppingCart className='icon' /> <div className="item-no"></div></Link>
-                <button>Login</button>
+                <Link to={"/signin"}><button>Login</button></Link>
                 <div className="menu-bar">
                     <Link className='icon-link' onClick={() => setShowMobileMenu(true)} ><RiMenu3Line className='icon' /></Link>
                 </div>

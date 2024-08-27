@@ -1,0 +1,248 @@
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.signup-container .login-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 10px;
+}
+.signup-container .login-nav .logo {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup-container .login-nav .logo img {
+  width: 100%;
+}
+.signup-container .login-nav p {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.signup-container .image-container {
+  padding-top: 70px;
+  background-color: azure;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.signup-container .image-container .image-content {
+  width: 70%;
+  height: 350px;
+  margin-block: 3rem;
+}
+.signup-container .image-container .image-content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100px 0px;
+}
+.signup-container .image-container h1 {
+  font-size: 1.7rem;
+  margin-bottom: 5px;
+}
+.signup-container .image-container p {
+  margin-bottom: 1rem;
+}
+.signup-container .login-container {
+  padding-block: 70px 20px;
+  width: 50%;
+  padding-inline: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.signup-container .login-container .login-content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.signup-container .login-container .login-content h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: -10px;
+}
+.signup-container .login-container .login-content p {
+  font-size: 0.7rem;
+}
+.signup-container .login-container .login-content .login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.signup-container .login-container .login-content .login .input-container label {
+  display: inline-block;
+  margin-block: 6px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.signup-container .login-container .login-content .login .input-container input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgba(116, 100, 100, 0.4039215686);
+  outline: none;
+  padding-inline: 1rem;
+  font-size: 1rem;
+}
+.signup-container .login-container .login-content .login .input-container input:focus {
+  border: 1px solid #000;
+}
+.signup-container .login-container .login-content .login .notification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.signup-container .login-container .login-content .login .notification .notif {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.signup-container .login-container .login-content .login .notification .notif input {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.signup-container .login-container .login-content .login .notification .notif span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.signup-container .login-container .login-content .login .notification p {
+  font-weight: bold;
+  cursor: pointer;
+  text-align: right;
+}
+.signup-container .login-container .login-content .login .notification p:hover {
+  text-decoration: underline;
+}
+.signup-container .login-container .login-content .login .action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup-container .login-container .login-content .login .action button {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: blue;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.signup-container .login-container .login-content .login .action button:hover {
+  background-color: rgb(10, 10, 226);
+}
+.signup-container .login-container .login-content .info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.signup-container .login-container .login-content .info span {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid rgba(133, 125, 125, 0.2);
+}
+.signup-container .login-container .login-content .info p {
+  text-wrap: nowrap;
+}
+.signup-container .login-container .login-content .social-logins {
+  display: flex;
+  margin: auto;
+  gap: 10px;
+  align-items: center;
+}
+.signup-container .login-container .login-content .social-logins button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid rgba(133, 125, 125, 0.2);
+  border-radius: 5px;
+  transition: all ease 0.4s;
+}
+.signup-container .login-container .login-content .social-logins button .icon-con {
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup-container .login-container .login-content .social-logins button .icon-con .icon {
+  font-size: 1rem;
+  color: blue;
+}
+.signup-container .login-container .login-content .social-logins button span {
+  color: blueviolet;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.signup-container .login-container .login-content .social-logins button:hover span {
+  color: rgba(0, 0, 255, 0.486);
+}
+.signup-container .login-container .login-content .social-logins button:focus {
+  border: 2px solid blueviolet;
+}
+.signup-container .login-container .login-content .social-logins button:focus span {
+  color: blueviolet;
+}
+@media screen and (max-width: 900px) {
+  .signup-container .login-container .login-content .social-logins button {
+    padding: 0.6rem 1rem;
+  }
+  .signup-container .login-container .login-content .social-logins button .icon-con .icon {
+    font-size: 2rem;
+  }
+  .signup-container .login-container .login-content .social-logins button span {
+    display: none;
+  }
+}
+.signup-container .login-container .login-content .redirection {
+  margin: auto;
+}
+.signup-container .login-container .login-content .redirection p {
+  margin-top: 1rem;
+}
+@media screen and (max-width: 750px) {
+  .signup-container .image-container {
+    display: none;
+  }
+  .signup-container .login-container {
+    width: 100%;
+  }
+  .signup-container .login-container .login-content {
+    width: 90%;
+  }
+  .signup-container .login-container .login-content .social-logins button span {
+    display: block;
+  }
+}
+@media screen and (max-width: 450px) {
+  .signup-container .login-container .login-content {
+    width: 100%;
+  }
+  .signup-container .login-container .login-content h1 {
+    font-size: 1.1rem;
+  }
+  .signup-container .login-container .login-content .social-logins button span {
+    display: none;
+  }
+  .signup-container .login-container .login-content .redirection {
+    margin-top: -1rem;
+  }
+}/*# sourceMappingURL=signUp.css.map */
