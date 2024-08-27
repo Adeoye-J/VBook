@@ -104,7 +104,7 @@ const CheckOut = () => {
                         </div>
                         <div className="total-cost">
                             <p>Total</p>
-                            <p>USD ${(getTotalCost()).toFixed(2) + standard_cost.toFixed(2)}</p>
+                            <p>USD ${(getTotalCost() + standard_cost).toFixed(2)}</p>
                         </div>
                     </div>
                 </div>
