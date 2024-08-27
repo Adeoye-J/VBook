@@ -62,6 +62,31 @@
         align-items: center;
         gap: 20px;
 
+        .icon-con {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            .item-no {
+                position: absolute;
+                top: -5px;
+                right: -10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: red;
+                text-align: center;
+                font-size: .6rem;
+                color: #fff;
+                font-weight: bold;
+                border: 1px solid #fff;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+        }
+
         button {
             transition: all ease .5s;
             border-radius: 5px;

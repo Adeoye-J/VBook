@@ -59,11 +59,11 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="icons">
-                <Link className='icon-link' to={"/pages/wishlist"}>
+                <Link className='icon-con' to={"/pages/wishlist"}>
                     <FaHeart className='icon' /> 
                     {wishlist.length > 0 && <div className="item-no">{wishlist.length}</div>}
                 </Link>
-                <Link className='icon-link' to={"/cart"}>
+                <Link className='icon-con' to={"/cart"}>
                     <FaShoppingCart className='icon' /> 
                     {cartData.length > 0 && <div className="item-no">{cartData.length}</div>}
                 </Link>
