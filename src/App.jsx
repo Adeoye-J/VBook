@@ -15,10 +15,12 @@ import CheckOut from './Components/CheckOut/CheckOut'
 import Wishlist from './Components/Wishlist/Wishlist'
 import SignIn from './Components/SignIn/SignIn'
 import SignUp from './Components/SignUp/SignUp'
+import ScrollToTop from './Containers/ScrollToTop/ScrollToTop'
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <NavBar />
       <VBookProvider>
         <Routes>
