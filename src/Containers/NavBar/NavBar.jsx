@@ -3,10 +3,7 @@ import "./navBar.css"
 import { Link } from 'react-router-dom'
 import {FaHeart, FaShoppingCart} from "react-icons/fa"
 import {RiMenu3Line, RiCloseFill} from "react-icons/ri"
-// import { VBookContext } from '../../VBookContext/VBookContext'
-
-
-// const [showMobileMenu, setShowMobileMenu] = useState(false)
+import { VBookContext } from '../../VBookContext/VBookContext'
 
 const Menu = () => {
 
@@ -42,7 +39,7 @@ const Menu = () => {
 
 const NavBar = () => {
     
-    // const {} = useContext(VBookContext)
+    const {cartData, wishlist} = useContext(VBookContext)
     const [showMobileMenu, setShowMobileMenu] = useState(false)
 
     
@@ -62,14 +59,19 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="icons">
-                <Link className='icon-link' to={"/pages/wishlist"}><FaHeart className='icon' /> <div className="item-no"></div></Link>
-                <Link className='icon-link' to={"/cart"}><FaShoppingCart className='icon' /> <div className="item-no"></div></Link>
+                <Link className='icon-link' to={"/pages/wishlist"}>
+                    <FaHeart className='icon' /> 
+                    {wishlist.length > 0 && <div className="item-no">{wishlist.length}</div>}
+                </Link>
+                <Link className='icon-link' to={"/cart"}>
+                    <FaShoppingCart className='icon' /> 
+                    {cartData.length > 0 && <div className="item-no">{cartData.length}</div>}
+                </Link>
                 <Link to={"/signin"}><button>Login</button></Link>
                 <div className="menu-bar">
                     <Link className='icon-link' onClick={() => setShowMobileMenu(true)} ><RiMenu3Line className='icon' /></Link>
                 </div>
             </div>
-            
         </div>
     )
 }

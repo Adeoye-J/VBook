@@ -48,6 +48,7 @@
 }
 .navbar-container .icons button {
   transition: all ease 0.5s;
+  border-radius: 5px;
 }
 .navbar-container .icons button:hover {
   background-color: rgb(7, 7, 175);

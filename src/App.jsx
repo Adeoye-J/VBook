@@ -21,8 +21,8 @@ function App() {
   return (
     <>
       <ScrollToTop />
-      <NavBar />
       <VBookProvider>
+      <NavBar />
         <Routes>
           <Route index element={<Home />} />
           <Route path='/home' element={<Home />} />

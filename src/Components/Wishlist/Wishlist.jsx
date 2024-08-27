@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom'
 import deals_data from "../../deals_books.json"
 import "./wishlist.css"
 
-
 const Wishlist = () => {
 
     const {wishlist} = useContext(VBookContext)
@@ -17,7 +16,7 @@ const Wishlist = () => {
         <div>
             <MainHero section_title={"Wishlist"} main_header='Pages' />
             {
-                wishlist > 0 
+                wishlist.length > 0 
                 ? <BookListing dataType={wishlist} title={"Wishlist"} />
                 : <div className='empty-wishes'>
                     <div className="icon-con">
