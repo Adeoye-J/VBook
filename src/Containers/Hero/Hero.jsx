@@ -6,17 +6,8 @@ import { VBookContext } from '../../VBookContext/VBookContext'
 
 const Hero = () => {
 
-  const [activeIndex, setActiveIndex] = useState(0)
   const {setSelectedItem} = useContext(VBookContext)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % hero_data.length)
-    }, 9000)
-
-    return () => clearInterval(interval)
-
-  }, [])
 
   return (
     <div className='hero-container'>
@@ -24,7 +15,7 @@ const Hero = () => {
         {
           hero_data.map((data, index) => (
             <div 
-              className={`item ${index === activeIndex ? "index" : ""}`} 
+              className="item" 
               key={index.id}
             >
               <div className="image-container">
@@ -45,15 +36,6 @@ const Hero = () => {
             </div>
           ))
         }
-      </div>
-      <div className="carousel-indicators">
-        {hero_data.map((_, index) => (
-          <span
-            key={index}
-            className={`indicator ${index === activeIndex ? 'active' : ''}`}
-            onClick={() => setActiveIndex(index)}
-          />
-        ))}
       </div>
     </div>
   )
