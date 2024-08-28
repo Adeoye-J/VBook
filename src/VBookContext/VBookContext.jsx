@@ -1,6 +1,5 @@
-import React, { createContext, useEffect, useState } from "react"
+import React, { createContext, useState } from "react"
 import all_data from "../all_books.json"
-
 
 export const VBookContext = createContext();
 
@@ -19,11 +18,9 @@ export const VBookProvider = ({children}) => {
         setCart(prevCart => [...prevCart, selectedItem])
         setCartData(prevCartData => [...prevCartData, newItem])
         setNumCost(prevNumCost => [...prevNumCost, { count: 1, cost: newItem['cost'] }])
-        // setShowMiniCart(true)
     };
 
     const handleRemoveFromCart = (indexToRemove) => {
-        // setShowMiniCart(true)
         setCart(prevCart => prevCart.filter((_, index) => index !== indexToRemove))
         setCartData(prevCartData => prevCartData.filter((_, index) => index !== indexToRemove))
         setNumCost(prevNumCost => prevNumCost.filter((_, index) => index !== indexToRemove))
