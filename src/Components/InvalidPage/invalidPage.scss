@@ -18,4 +18,14 @@
         font-style: italic;
         text-align: center;
     }
+
+    .link {
+        text-decoration: underline;
+        font-weight: bold;
+        transition: all ease .5s;
+
+        &:hover {
+            color: blue;
+        }
+    }
 }

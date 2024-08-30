@@ -16,4 +16,12 @@
   font-size: 2rem;
   font-style: italic;
   text-align: center;
+}
+.invalid-page-container .link {
+  text-decoration: underline;
+  font-weight: bold;
+  transition: all ease 0.5s;
+}
+.invalid-page-container .link:hover {
+  color: blue;
 }/*# sourceMappingURL=invalidPage.css.map */
