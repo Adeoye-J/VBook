@@ -5,7 +5,7 @@ import {FaHeart, FaShoppingCart} from "react-icons/fa"
 import {RiMenu3Line, RiCloseFill} from "react-icons/ri"
 import { VBookContext } from '../../VBookContext/VBookContext'
 
-const Menu = () => {
+const Menu = ({setShowMobileMenu}) => {
 
     const [menu, setMenu] = useState("Home")
     const [showSublist, setShowSublist] = useState(false)
@@ -14,11 +14,17 @@ const Menu = () => {
         setMenu("Categories")
         setShowSublist(!showSublist)
     }
+
+    const handleClick = (menuName) => {
+        setMenu(menuName)
+        setShowSublist(false)
+        setShowMobileMenu(false)
+    }
     
     return(
         <>
-            <li onClick={() => {setMenu("Home"); setShowSublist(false)}} ><Link className={`list-item ${menu === "Home" && "underline"}`} to={"/home"}>Home</Link></li>
-            <li onClick={() => {setMenu("Books"); setShowSublist(false)}} ><Link className={`list-item ${menu === "Books" && "underline"}`} to={"/books"}>Books</Link></li>
+            <li onClick={() => handleClick("Home")} ><Link className={`list-item ${menu === "Home" && "underline"}`} to={"/home"}>Home</Link></li>
+            <li onClick={() => handleClick("Books")} ><Link className={`list-item ${menu === "Books" && "underline"}`} to={"/books"}>Books</Link></li>
 
             <li 
                 onClick={handleCategories}
@@ -26,13 +32,13 @@ const Menu = () => {
                 <Link className={`list-item ${menu === "Categories" && "underline"}`} >Categories</Link>
                 {showSublist && (
                     <ul className='sublist'>
-                        <li><Link className='list-item' to={"/categories/fiction"}>Fiction</Link></li>
-                        <li><Link className='list-item' to={"/categories/non-fiction"}>Non-Fiction</Link></li>
+                        <li onClick={() => handleClick("Fiction")}><Link className='list-item' to={"/categories/fiction"}>Fiction</Link></li>
+                        <li onClick={() => handleClick("Non-Fiction")}><Link className='list-item' to={"/categories/non-fiction"}>Non-Fiction</Link></li>
                     </ul>
                 )}
             </li>
-            <li onClick={() => {setMenu("Trending"); setShowSublist(false)}} ><Link className={`list-item ${menu === "Trending" && "underline"}`} to={"/pages/trending"}>Trending</Link></li>
-            <li onClick={() => {setMenu("Deals"); setShowSublist(false)}} ><Link className={`list-item ${menu === "Deals" && "underline"}`} to={"/pages/deals"}>Deals</Link></li>
+            <li onClick={() => handleClick("Trending")} ><Link className={`list-item ${menu === "Trending" && "underline"}`} to={"/pages/trending"}>Trending</Link></li>
+            <li onClick={() => handleClick("Deals")} ><Link className={`list-item ${menu === "Deals" && "underline"}`} to={"/pages/deals"}>Deals</Link></li>
         </>
     )
 }
@@ -52,7 +58,7 @@ const NavBar = () => {
             </div>
             <div className={`${showMobileMenu ? "mobile-menu" : "main-menu"}`}>
                 <ul className="list-items">
-                    <Menu />
+                    <Menu setShowMobileMenu={setShowMobileMenu} />
                     <div className="cross-bar">
                         <Link className='icon-link' onClick={() => setShowMobileMenu(false)}><RiCloseFill className='icon' /></Link>
                     </div>
