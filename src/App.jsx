@@ -44,8 +44,8 @@ function App() {
           </Route>
           <Route path="/cart" element={<MainCart />} />
           <Route path='/checkout' element={<CheckOut />} />
+          <Route path="*" element={<InvalidPage />}/>
         </Routes>
-        <Route path="*" element={<InvalidPage />}/>
       </VBookProvider>
       <Footer />
     </>
