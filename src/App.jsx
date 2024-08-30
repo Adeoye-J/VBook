@@ -16,6 +16,7 @@ import Wishlist from './Components/Wishlist/Wishlist'
 import SignIn from './Components/SignIn/SignIn'
 import SignUp from './Components/SignUp/SignUp'
 import ScrollToTop from './Containers/ScrollToTop/ScrollToTop'
+import InvalidPage from './Components/InvalidPage/InvalidPage'
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/cart" element={<MainCart />} />
           <Route path='/checkout' element={<CheckOut />} />
         </Routes>
+        <Route path="*" element={<InvalidPage />}/>
       </VBookProvider>
       <Footer />
     </>
