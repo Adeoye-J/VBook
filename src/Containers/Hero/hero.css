@@ -75,6 +75,9 @@
   }
 }
 @media screen and (max-width: 550px) {
+  .hero-container {
+    padding-block: 2rem;
+  }
   .hero-container .hero-carousel .item {
     flex-direction: column;
   }
@@ -82,7 +85,11 @@
     width: 300px;
   }
   .hero-container .hero-carousel .item .item-info .description p {
-    font-size: 1.5rem;
+    text-align: center;
+  }
+  .hero-container .hero-carousel .item .item-info .action {
+    display: flex;
+    justify-content: center;
   }
 }
 @keyframes mainMenuAnim {

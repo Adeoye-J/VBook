@@ -70,6 +70,7 @@
                 }
 
                 .action {
+
                     button {
                         width: 200px;
                         height: 45px;
@@ -102,6 +103,8 @@
                             font-size: 1.3rem;
                         }
                     }
+
+                    
                 }
             }
         }
@@ -110,6 +113,7 @@
 
 @media screen and (max-width: 550px) {
     .hero-container {
+        padding-block: 2rem;
 
         .hero-carousel {
             
@@ -122,8 +126,13 @@
                     .description {
 
                         p {
-                            font-size: 1.5rem;
+                            text-align: center;
                         }
+                    }
+
+                    .action {
+                        display: flex;
+                        justify-content: center;
                     }
                 }
             }

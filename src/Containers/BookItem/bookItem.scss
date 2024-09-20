@@ -2,72 +2,78 @@
     border-radius: 10px;
     min-width: 270px;
     max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     
 
     .book-cover {
+        width: 200px;
         height: 480px;
+        height: 300px;
         position: relative;
         transition: all ease 1s;
 
-        &:hover {
-            .on-hover {
-                display: flex;
-            }
-        }
+        // &:hover {
+        //     .on-hover {
+        //         display: flex;
+        //     }
+        // }
 
-        .on-hover {
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 480px;
-            width: 100%;
-            display: none;
-            align-items: center;
-            justify-content: right;
-            padding: 1rem;
-            background-color: rgba(0, 0, 0, 0.527);
-            animation: onHover 1s ease 0s 1 normal forwards;
+        // .on-hover {
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     height: 480px;
+        //     width: 100%;
+        //     display: none;
+        //     align-items: center;
+        //     justify-content: right;
+        //     padding: 1rem;
+        //     background-color: rgba(0, 0, 0, 0.527);
+        //     animation: onHover 1s ease 0s 1 normal forwards;
 
-            .icons {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 1rem;
+        //     .icons {
+        //         display: flex;
+        //         flex-direction: column;
+        //         align-items: center;
+        //         justify-content: center;
+        //         gap: 1rem;
 
-                .icon-con {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    background-color: blue;
+        //         .icon-con {
+        //             display: flex;
+        //             align-items: center;
+        //             justify-content: center;
+        //             cursor: pointer;
+        //             width: 40px;
+        //             height: 40px;
+        //             border-radius: 50%;
+        //             background-color: blue;
 
-                    .icon {
-                        font-size: 20px;
-                        transition: all ease .5s;
+        //             .icon {
+        //                 font-size: 20px;
+        //                 transition: all ease .5s;
 
-                        // &:hover {
-                        //     color: blue;
-                        // }
-                    }
+        //                 // &:hover {
+        //                 //     color: blue;
+        //                 // }
+        //             }
 
                     
-                }
-                .color {
+        //         }
+        //         .color {
 
-                    .icon {
-                        color: red;
-                    }
-                }
+        //             .icon {
+        //                 color: red;
+        //             }
+        //         }
 
                 
-            }
+        //     }
 
-        }
+        // }
 
         img {
             width: 100%;
