@@ -51,6 +51,16 @@ const BookDetails = () => {
         }
     }
 
+    const handleBuyNow = () => {
+        const item = cartData.find((book) => book.title === selectedItem)
+
+        if (!item) {
+            handleAddToCart()
+        }
+
+        return;
+    }
+
   return (
     <div className='bookdetails-container'>
         <MainHero section_title={selectedItem} />
@@ -126,7 +136,7 @@ const BookDetails = () => {
                         </div>
                         <div className="active-action">
                             <Link onClick={() => setShowMiniCart(true)}>
-                                <button onClick={handleAddToCart}>
+                                <button onClick={handleBuyNow}>
                                     Buy It Now
                                 </button>
                             </Link>

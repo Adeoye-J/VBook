@@ -66,7 +66,7 @@ const SideCart = () => {
                     </div>
                     <div className="action-container">
                         <Link to={"/cart"}><button onClick={() => setShowMiniCart(false)}>View Cart</button></Link>
-                        <button>Check Out</button>
+                        <Link to={"/checkout"}><button onClick={() => setShowMiniCart(false)}>Check Out</button></Link>
                     </div>
                 </div>
             </div>
