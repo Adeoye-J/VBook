@@ -30,10 +30,10 @@ const Home = () => {
         <Offers />
         <Search />
         <SearchResult />
-        <BookListing limit={3} dataType={deals_data["deals_books"]} title={"Deals"}/>
-        <BookListing limit={3} dataType={trending_data["trending_books"]} title={"Trending"}/>
+        <BookListing limit={4} dataType={deals_data["deals_books"]} title={"Deals"}/>
+        <BookListing limit={4} dataType={trending_data["trending_books"]} title={"Trending"}/>
         <SpecialOffer />
-        <BookListing limit={3} dataType={recommended_data["recommended_books"]} title={"Recommended"}/>
+        <BookListing limit={4} dataType={recommended_data["recommended_books"]} title={"Recommended"}/>
         <Newsletter />
     </div>
   )
